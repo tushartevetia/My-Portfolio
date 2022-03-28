@@ -1,0 +1,179 @@
+//Tablets and Smaller
+@media (max-width: 800px) {
+  #header-home {
+    height: 35rem;
+
+    .header-content {
+      padding-top: 5rem;
+    }
+  }
+
+  #journey-a {
+    ul li div {
+      width: 250px;
+      h3 {
+        width: 200px;
+      }
+    }
+    ul li:nth-child(even) div {
+      left: -270px;
+    }
+    ul li:nth-child(odd) div {
+      left: -160px;
+    }
+  }
+}
+
+//Smartphones
+@media (max-width: 500px) {
+  #header {
+    &-home {
+      height: 10rem;
+      border-bottom: 3px solid $main-color;
+      background-position: 20% 30%;
+
+      .header-content {
+        display: none;
+      }
+    }
+
+    &-inner {
+      height: 10rem;
+    }
+  }
+
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      padding: 1rem;
+    }
+  }
+
+  #journey {
+    &-a {
+      ul li {
+        margin-left: 20px;
+        grid-template-columns: 1fr;
+        margin-right: 0;
+
+        div {
+          width: calc(100vw - 90px);
+        }
+      }
+      ul li:nth-child(even) div {
+        width: 150px;
+        left: 40px;
+        img {
+          order: 1;
+        }
+        h3 {
+          order: 0;
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  //Stack Grid columns
+  #home-a .specials,
+  #home-b .stats,
+  #home-c .preference,
+  .items,
+  #contact-b .contact-info {
+    grid-template-columns: 1fr;
+  }
+  //Home
+  #home {
+    &-a {
+      .specials div {
+        border-bottom: 1px $light-color solid;
+        padding-bottom: 1rem;
+
+        &:last-child {
+          border: none;
+          padding: 0;
+        }
+      }
+    }
+    &-b {
+      .stats div {
+        padding: 2rem 0;
+      }
+    }
+  }
+
+  //About
+  #about {
+    &-a {
+      .about-info {
+        grid-template-areas:
+          "bioimage"
+          "bio";
+      }
+    }
+  }
+
+  //contact
+  #contact {
+    &-a {
+      .text-fields {
+        grid-template-areas:
+          "name"
+          "subject"
+          "email"
+          "phone"
+          "message";
+      }
+    }
+    &-b {
+      div {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px #555 solid;
+
+        &:last-child {
+          border: none;
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    &-c {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  //Footer
+  #main-footer {
+    height: 7rem;
+
+    .footer-content {
+      flex-direction: column;
+      padding: 1rem;
+      height: 5rem;
+    }
+  }
+}
+
+//landscape
+@media (max-height: 580px) {
+  #header-home {
+    .header-content {
+      padding-top: 3rem;
+    }
+  }
+
+  #journey-a {
+    ul li:nth-child(odd) div {
+      left: -160px;
+    }
+    ul li:nth-child(even) div {
+      left: -250px;
+    }
+  }
+}
